@@ -7,6 +7,8 @@
     let serverVersion = "1.17.0-beta"
     let author = "ManifestCreator"
     let manifest = "";
+    let module1UUID = ""
+    let module2UUID = ""
 
     // Helper function to generate a UUID (for the sake of the example)
     function generateUUID() {
@@ -16,6 +18,24 @@
             return value.toString(16);
         });
     }
+    function generateUUID1() {
+        module1UUID = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (char) {
+            const random = Math.random() * 16 | 0;
+            const value = char === 'x' ? random : (random & 0x3 | 0x8);
+            return value.toString(16);
+        });
+    }
+    function generateUUID2() {
+        module2UUID = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (char) {
+            const random = Math.random() * 16 | 0;
+            const value = char === 'x' ? random : (random & 0x3 | 0x8);
+            return value.toString(16);
+        });
+    }
+
+    generateUUID1()
+    generateUUID2()
+    generateUUID()
 
     // Function to generate the manifest file in the desired format
     function generateManifest() {
@@ -34,7 +54,7 @@
             modules: [
                 {
                     type: "data",
-                    uuid: generateUUID(),
+                    uuid: module1UUID,
                     version: [
                         1,
                         0,
@@ -44,7 +64,7 @@
                 {
                     type: "script",
                     language: "javascript",
-                    uuid: generateUUID(),
+                    uuid: module2UUID,
                     entry: "scripts/main.js",
                     version: [
                         1,
