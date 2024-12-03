@@ -4,7 +4,7 @@
     let description = "Your custom description here.";
     let name = "My Addon";
     let serveruiVersion = "1.4.0-beta"; // Module version
-    let serverVersion = "1.16.0-beta"
+    let serverVersion = "1.17.0-beta"
     let author = "ManifestCreator"
     let manifest = "";
 
