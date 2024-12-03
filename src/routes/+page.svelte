@@ -46,8 +46,3 @@
     </div>
   </div>
 </div>
-
-<!-- Footer Section (Optional) -->
-<div class="bg-primary-800 text-center text-primary-200 py-4 mt-20">
-  <p class="text-sm">© 2024 Minecraft Generator Tools - All rights reserved.</p>
-</div>
